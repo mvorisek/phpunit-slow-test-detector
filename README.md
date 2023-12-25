@@ -398,9 +398,7 @@ When phpunit/phpunit invokes `PHPUnit\Framework\TestCase::runBare()`, it will in
 
 ### Understanding measured test durations when using  `phpunit/phpunit:^10.0.0`
 
-The extension relies on [`PHPUnit\Event\Test\PreparationStarted`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Event/Events/Test/Lifecycle/PreparationStarted.php#L22-L50) and [`PHPUnit\Event\Test\Finished`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Event/Events/Test/Lifecycle/Finished.php#L22-L57) events and measures the duration between the former and the latter event is emit by `phpunit/phpunit` for each test.
-
-Simply said, the duration of each test is the time spent in [`PHPUnit\Framework\TestCase::runBare()`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Framework/TestCase.php#L581-L711) method where the following test methods are executed:
+The duration of each test is the time spent in [`PHPUnit\Framework\TestCase::runBare()`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Framework/TestCase.php#L581-L711) method where the following test methods are executed:
 
 - [`PHPUnit\Framework\TestCase::setUp()` and methods annotated with `@before`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Framework/TestCase.php#L611)
 - [`PHPUnit\Framework\TestCase::assertPreConditions()`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Framework/TestCase.php#L612)
@@ -412,6 +410,8 @@ When `phpunit/phpunit` process isolation for a given test is enabled, the follow
 
 - [`PHPUnit\Framework\TestCase::setUpBeforeClass()` and methods annotated with `@beforeClass`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Framework/TestCase.php#L603)
 - [`PHPUnit\Framework\TestCase::tearDownAfterClass()` and methods annotated with `@afterClass`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Framework/TestCase.php#L683)
+
+The extension relies on [`PHPUnit\Event\Test\PreparationStarted`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Event/Events/Test/Lifecycle/PreparationStarted.php#L22-L50) and [`PHPUnit\Event\Test\Finished`](https://github.com/sebastianbergmann/phpunit/blob/10.0.0/src/Event/Events/Test/Lifecycle/Finished.php#L22-L57) events and measures the duration between the former and the latter event is emit by `phpunit/phpunit` for each test.
 
 ## Changelog
 
