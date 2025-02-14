@@ -22,7 +22,7 @@ Configuration: %s/EndToEnd/Version11/TestMethod/WithMaximumDurationAttribute/php
 
 ..                                                                  2 / 2 (100%)
 
-Detected 1 test where the duration exceeded the maximum duration.
+Detected 1 test where the duration exceeded the maximum duration (100 ms).
 
 1. 3%s ms (200 ms) Ergebnis\PHPUnit\SlowTestDetector\Test\EndToEnd\Version11\TestMethod\WithMaximumDurationAttribute\SleeperTest::testSleeperSleepsLongerThanMaximumDurationFromAttributeWhenTestMethodHasValidMaximumDurationAttribute
 

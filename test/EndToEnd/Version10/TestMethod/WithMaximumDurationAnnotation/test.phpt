@@ -22,10 +22,10 @@ Configuration: %s/EndToEnd/Version10/TestMethod/WithMaximumDurationAnnotation/ph
 
 ....                                                                4 / 4 (100%)
 
-Detected 2 tests where the duration exceeded the maximum duration.
+Detected 2 tests where the duration exceeded the maximum duration (100 ms).
 
 1. 3%s ms (200 ms) Ergebnis\PHPUnit\SlowTestDetector\Test\EndToEnd\Version10\TestMethod\WithMaximumDurationAnnotation\SleeperTest::testSleeperSleepsLongerThanMaximumDurationFromAnnotationWhenTestMethodHasValidMaximumDurationAnnotation
-2. 2%s ms (100 ms) Ergebnis\PHPUnit\SlowTestDetector\Test\EndToEnd\Version10\TestMethod\WithMaximumDurationAnnotation\SleeperTest::testSleeperSleepsLongerThanMaximumDurationFromXmlConfigurationWhenTestMethodHasInvalidMaximumDurationAnnotation
+2. 2%s ms Ergebnis\PHPUnit\SlowTestDetector\Test\EndToEnd\Version10\TestMethod\WithMaximumDurationAnnotation\SleeperTest::testSleeperSleepsLongerThanMaximumDurationFromXmlConfigurationWhenTestMethodHasInvalidMaximumDurationAnnotation
 
 Time: %s, Memory: %s
 
